@@ -1,0 +1,80 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-style: inherit;
+  background-color: darkblue;
+  overflow: hidden;
+}
+
+.header {
+  padding: 4px 10px;
+  font-size: 30px;
+  margin-left: 50px;
+}
+.form {
+  width: 400px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-image: url("./23.jpg");
+}
+.form input {
+  margin-left: 30px;
+  display: flex;
+  padding: 10px 80px;
+  border-radius: 5px;
+  margin-top: 8px;
+  padding-bottom: 20px;
+  font-style: inherit;
+}
+.form label {
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size: 20px;
+  font-style: inherit;
+}
+p {
+  margin-bottom: 20px;
+  margin-top: 0px;
+  margin-left: 30px;
+}
+.main-btn {
+  background-color: orange;
+  padding: 8px 140px;
+  margin-left: 30px;
+  border-radius: 5px;
+  border-color: orange;
+  font-size: 15px;
+  color: white;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-style: inherit;
+}
+.para-5 {
+  color: red;
+  display: none;
+}
+.para-4 {
+  color: red;
+  display: none;
+}
+.para-3 {
+  color: red;
+  display: none;
+}
+.para-2 {
+  color: red;
+  display: none;
+}
+.para-1 {
+  color: red;
+  display: none;
+}

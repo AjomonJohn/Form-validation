@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="second">
+        <form class="form" id="form">
+          <div class="header">
+            <h2>Create account</h2>
+          </div>
+          <div class="form-control">
+            <label>Username</label>
+            <input type="text" placeholder="username" id="username" />
+            <p class="para-5">Error message</p>
+          </div>
+          <div class="form-control">
+            <label>Email</label>
+            <input type="text" placeholder="email" id="email" />
+            <p class="para-4">Error message</p>
+          </div>
+          <div class="form-control">
+            <label>phone number</label>
+            <input type="number" placeholder="phone no" id="phone" />
+            <p class="para-3">Error message</p>
+          </div>
+          <div class="form-control">
+            <label>Password</label>
+            <input type="password" placeholder="password" id="password" />
+            <p class="para-2">Error message</p>
+          </div>
+          <div class="form-control">
+            <label>Renter password</label>
+            <input type="password" placeholder="enterpassword" id="password2" />
+            <p class="para-1">not matching</p>
+          </div>
+          <button
+            class="main-btn"
+            type="button"
+            value="submit"
+            onclick="return validate()"
+          >
+            submit
+          </button>
+        </form>
+      </div>
+    </div>
+    <script>
+      function validate() {
+        const form = document.getElementById("form").value;
+        const Username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const phone = document.getElementById("phone").value;
+        let phonereg = /^\d{10}$/;
+        const password = document.getElementById("password").value;
+        var strongRegex = new RegExp(
+          "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})"
+        );
+        const password2 = document.getElementById("password2").value;
+
+        if (Username === "") {
+          document.querySelector(".para-5").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".para-5").style.display = "none";
+          }, 2000);
+        } else if (email.match(regexEmail) === null) {
+          document.querySelector(".para-4").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".para-4").style.display = "none";
+          }, 2000);
+        } else if (phone.match(phonereg) === null) {
+          document.querySelector(".para-3").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".para-3").style.display = "none";
+          }, 2000);
+        } else if (password.match(strongRegex) === null) {
+          document.querySelector(".para-2").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".para-2").style.display = "none";
+          }, 2000);
+        } else if (password2.match(password) === null) {
+          document.querySelector(".para-1").style.display = "block";
+          setTimeout(function () {
+            document.querySelector(".para-1").style.display = "none";
+          }, 2000);
+        } else {
+          alert("scuccessfully submitted yor data");
+        }
+      }
+    </script>
+  </body>
+</html>
